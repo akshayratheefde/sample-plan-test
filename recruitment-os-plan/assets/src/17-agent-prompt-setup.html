@@ -1,0 +1,135 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="ui.css">
+<style>
+  .rtab{display:inline-block;font-size:12.5px;font-weight:700;padding:7px 13px;border-radius:8px;border:1px solid #cfd8e6;color:#556;background:#fff}
+  .rtab.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .tgl{width:36px;height:20px;border-radius:12px;background:#c6d0e2;position:relative;display:inline-block;flex-shrink:0}
+  .tgl.on{background:var(--green)}
+  .tgl::after{content:"";position:absolute;top:2.5px;left:2.5px;width:15px;height:15px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2)}
+  .tgl.on::after{left:18.5px}
+  .lock{font-size:9px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;background:#e9edf4;color:#7a86a2;padding:2px 7px;border-radius:6px}
+  .prompt{background:#0f2340;border-radius:12px;padding:16px 18px;color:#cdd8ef;font-size:13px;line-height:1.9}
+  .var{display:inline-block;background:rgba(47,109,246,.28);color:#a9c8ff;border:1px solid #35568a;border-radius:6px;padding:1px 8px;font-weight:700;font-size:12.5px}
+  .cmt{color:#7d8cb0;font-style:italic}
+  .ar-lt{display:inline-block;width:0;height:0;border-left:7px solid #8fa5cf;border-top:5px solid transparent;border-bottom:5px solid transparent;vertical-align:middle;margin:0 5px}
+  .qrow{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:9px;padding:10px 12px;background:#fff;margin-bottom:8px}
+  .qrow.off{opacity:.55}
+  .qn{width:20px;height:20px;border-radius:6px;background:#eef2f8;color:#5c6a86;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .qt{flex:1;font-size:12.5px;font-weight:600;line-height:1.35}
+  .grow{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+  .grow:last-child{border-bottom:0}
+  .gt{flex:1;font-size:12.5px;font-weight:600}
+  .addq{font-size:12.5px;font-weight:700;color:#3a476a;border:1px dashed #b9c6e0;border-radius:9px;padding:9px 13px;display:inline-block;background:#fff}
+</style></head>
+<body>
+<div class="slide" style="width:1300px;height:1360px">
+  <div class="band">
+    <span class="stage-tag" style="background:rgba(107,70,229,.28);border-color:rgba(124,92,246,.6);color:#dcd2fb">TEAM LEAD · AI AGENT &amp; PROMPT SETUP</span>
+    <h1>The AI screening agent — pre-filled, and yours to tune</h1>
+    <p class="sub">Every role starts with a ready script and a safe prompt. The Team Lead edits the wording, questions, language and guardrails — changes are versioned and approved.</p>
+  </div>
+
+  <div class="body">
+    <div class="browser">
+      <div class="bbar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="url">app.recruitos.in/team/agent-setup?role=warehouse-executive</span></div>
+      <div class="app">
+        <div class="nav">
+          <div class="brand">Recruitment OS</div>
+          <a><span class="ic"></span>Today</a>
+          <a><span class="ic"></span>My Data</a>
+          <a><span class="ic"></span>Requirements</a>
+          <a><span class="ic"></span>Candidates</a>
+          <a class="active"><span class="ic"></span>Team</a>
+          <a><span class="ic"></span>Billing</a>
+          <a><span class="ic"></span>Reports</a>
+          <a class="soon"><span class="ic"></span>Sales<span class="pill">Soon · BDE</span></a>
+        </div>
+        <div class="main">
+          <div class="h-row" style="margin-bottom:14px">
+            <div style="display:flex;align-items:center;gap:14px">
+              <div class="title-lg" style="line-height:1.15">AI Screening<br>Agent</div>
+              <span class="rtab on">Warehouse Executive</span><span class="rtab">Accountant</span><span class="rtab">Driver</span>
+              <span class="chip green">v3 · live</span>
+            </div>
+            <span class="btn purple">Save &amp; request approval</span>
+          </div>
+
+          <div class="grid2" style="align-items:start;margin-bottom:13px">
+            <div class="card" style="position:relative">
+              <span class="cue" style="left:-10px;top:-10px">1</span>
+              <div class="title-sm" style="margin:0 0 10px">Agent identity</div>
+              <div class="grid2" style="gap:10px">
+                <div class="field"><div class="lbl">Assistant name</div><div class="val">Riya (AI)</div></div>
+                <div class="field"><div class="lbl">Calls on behalf of</div><div class="val">Your Agency</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;margin-top:11px">
+                <span class="tgl on"></span><span style="font-size:12.5px;font-weight:600">Says it is an automated assistant and asks to record</span><span class="lock">locked</span></div>
+            </div>
+            <div class="card" style="position:relative">
+              <span class="cue" style="right:2px;top:-10px">2</span>
+              <div class="title-sm" style="margin:0 0 10px">Language &amp; voice</div>
+              <div style="display:flex;align-items:center;gap:7px;margin-bottom:11px">
+                <span class="rtab">Hindi</span><span class="rtab">English</span><span class="rtab on" style="background:var(--purple);border-color:var(--purple)">Hinglish</span>
+                <span class="muted" style="font-size:11.5px">switches mid-call if needed</span></div>
+              <div class="grid2" style="gap:10px">
+                <div class="field"><div class="lbl">Voice</div><div class="val">Female · warm</div></div>
+                <div class="field"><div class="lbl">Calling window</div><div class="val">10:00–19:00</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="position:relative;margin-bottom:8px">
+            <p class="title-sm" style="margin:0">System prompt — pre-filled, edit the wording (keep the variables)</p>
+            <span class="cue" style="left:-11px;top:-8px">3</span>
+          </div>
+          <div class="prompt">
+            You are <span class="var">Riya</span>, an automated hiring assistant calling for <span class="var">{{agency}}</span>.<br>
+            You are speaking with <span class="var">{{candidate_name}}</span> about a <span class="var">{{role}}</span> role in <span class="var">{{location}}</span>, paying <span class="var">{{salary_range}}</span>.<br>
+            <span class="cmt">// Greet, say you are an AI assistant, and ask permission to record. Speak in {{language}}.</span><br>
+            Ask the screening questions below one at a time. Save each answer as structured data.<br>
+            <span class="cmt">// If the candidate is upset, asks to negotiate salary, or asks for a person<span class="ar-lt"></span>hand over to the recruiter. Never promise an offer or a fee.</span><br>
+            If interested, offer interview slots on WhatsApp and confirm the best time.
+          </div>
+
+          <div class="grid2" style="align-items:start;margin-top:14px">
+            <div style="position:relative">
+              <p class="title-sm" style="margin:0 0 9px">Screening questions · drag to reorder</p>
+              <span class="cue" style="left:-11px;top:-9px">4</span>
+              <div class="qrow"><span class="qn">1</span><span class="qt">Are you interested in a {{role}} role in {{location}}?</span><span class="tgl on"></span></div>
+              <div class="qrow"><span class="qn">2</span><span class="qt">How many years of experience do you have?</span><span class="tgl on"></span></div>
+              <div class="qrow"><span class="qn">3</span><span class="qt">Are you comfortable with night shifts?</span><span class="tgl on"></span></div>
+              <div class="qrow"><span class="qn">4</span><span class="qt">What is your notice period?</span><span class="tgl on"></span></div>
+              <div class="qrow"><span class="qn">5</span><span class="qt">What salary are you expecting?</span><span class="tgl on"></span></div>
+              <div class="qrow off"><span class="qn">6</span><span class="qt">Do you have your own vehicle?</span><span class="tgl"></span></div>
+              <span class="addq">+ Add question</span>
+            </div>
+            <div class="card" style="position:relative">
+              <span class="cue" style="right:2px;top:-10px">5</span>
+              <div class="title-sm" style="margin:0 0 6px">Guardrails</div>
+              <div class="grow"><span class="tgl on"></span><span class="gt">Consent captured before any call</span><span class="lock">locked</span></div>
+              <div class="grow"><span class="tgl on"></span><span class="gt">Respect calling hours &amp; do-not-disturb</span></div>
+              <div class="grow"><span class="tgl on"></span><span class="gt">Hand over on money / upset / “talk to a person”</span></div>
+              <div class="grow"><span class="tgl on"></span><span class="gt">“Stop” opts the candidate out for good</span><span class="lock">locked</span></div>
+              <div class="grow"><span class="tgl on"></span><span class="gt">Ask only fair, job-related questions</span></div>
+              <div class="grow"><span class="tgl"></span><span class="gt">Leave a voicemail if no answer</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <h4>What each number means</h4>
+      <div class="item"><span class="num">1</span><p><b>Identity, fixed where it matters.</b> Name and who it represents are editable; “say it is an AI &amp; ask to record” is locked on for compliance.</p></div>
+      <div class="item"><span class="num">2</span><p><b>Language &amp; voice.</b> Hindi, English or Hinglish (switches mid-call), with voice and calling window per desk.</p></div>
+      <div class="item"><span class="num">3</span><p><b>Pre-filled prompt.</b> The system ships a safe, working prompt. The TL edits the wording but keeps the variables that fill in per candidate and role.</p></div>
+      <div class="item"><span class="num">4</span><p><b>Questions the desk owns.</b> Reorder, edit, toggle on/off or add — the same questions feed the call, the WhatsApp chat and the recruiter's own screening.</p></div>
+      <div class="item"><span class="num">5</span><p><b>Guardrails.</b> Safety rules are toggles; the critical ones (consent, opt-out) are locked and can't be disabled.</p></div>
+      <div class="note"><b>Versioned &amp; approved:</b> edits become a new draft that goes live only after Admin sign-off. Every change is logged (who, what, when).</div>
+    </div>
+  </div>
+
+  <div class="foot"><b>One script, three places:</b> the prompt and questions set here drive the Voice AI call, the WhatsApp screening chat and the recruiter's manual take-over — so every candidate is asked the same, approved things.</div>
+  <div class="brandfoot"><span>Recruitment OS · Recruiter Flow</span><span>Screen 17 — AI agent &amp; prompt setup</span></div>
+</div>
+</body></html>

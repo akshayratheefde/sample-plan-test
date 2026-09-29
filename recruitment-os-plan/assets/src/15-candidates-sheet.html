@@ -1,0 +1,195 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="ui.css">
+<style>
+  .toolbtn{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;padding:8px 13px;border-radius:8px;border:1px solid #cfd8e6;color:#3a476a;background:#fff}
+  .search{width:300px;background:#fff;border:1px solid #d9e0ec;border-radius:8px;color:#8994ab;font-size:12.5px;padding:9px 13px;white-space:nowrap;overflow:hidden}
+  .viewtab{display:inline-block;font-size:12.5px;font-weight:700;padding:7px 13px;border-radius:8px;border:1px solid #cfd8e6;color:#556;background:#fff}
+  .viewtab.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .filterchip{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;padding:6px 11px;border-radius:8px;background:#eef2f8;color:#39466a;border:1px solid #dde4ee}
+  .filterchip .x{color:#9aa6c0;font-weight:800}
+  .addf{font-size:12px;font-weight:700;color:var(--blue);padding:6px 4px}
+  .clearf{font-size:12px;font-weight:700;color:var(--muted);padding:6px 4px}
+  .filter-grid{display:grid;grid-template-columns:1fr 0.85fr 1.05fr 1.05fr 1.15fr 1.5fr;gap:18px}
+  .fcol .cap{font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:9px}
+  .chk-line{display:flex;align-items:center;gap:8px;font-size:12.5px;margin-bottom:7px;color:#33405e;font-weight:600}
+  .cbx{width:15px;height:15px;border-radius:4px;border:1.5px solid #b9c6e0;display:inline-block;vertical-align:middle;background:#fff;position:relative;flex-shrink:0}
+  .cbx.on{background:var(--blue);border-color:var(--blue)}
+  .cbx.on::after{content:"";position:absolute;left:4px;top:1px;width:3px;height:7px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(43deg)}
+  .slider{height:5px;border-radius:4px;background:#dbe2ee;position:relative;margin:16px 6px 8px}
+  .slider .fill{position:absolute;height:5px;border-radius:4px;background:var(--blue)}
+  .knob{position:absolute;width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid var(--blue);top:-5px}
+  .slbl{font-size:12.5px;font-weight:700;color:var(--ink)}
+  .fchip{display:inline-block;font-size:11px;font-weight:700;padding:5px 10px;border-radius:7px;border:1px solid #cfd8e6;color:#556;margin:0 5px 5px 0;background:#fff}
+  .fchip.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .sheet{width:100%;border-collapse:collapse;font-size:11.5px}
+  .sheet th{background:var(--navy);color:#fff;text-align:left;padding:7px 5px;font-size:10.5px;letter-spacing:.02em;white-space:nowrap}
+  .sheet td{padding:6px 5px;border-bottom:1px solid var(--line);white-space:nowrap}
+  .sheet tr:nth-child(even) td{background:#f7f9fc}
+  .sheet .froz{border-left:1px solid #eef0f5}
+  .namecell{display:flex;align-items:center;gap:6px}
+  .av-sm{width:22px;height:22px;border-radius:50%;background:#d6def0;color:#3d4f7d;font-weight:800;font-size:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .cell-edit{display:inline-block;border:1.5px solid var(--blue);border-radius:5px;padding:1px 6px;background:#fff;box-shadow:0 0 0 3px rgba(47,109,246,.13);font-weight:700}
+  .mbar{height:8px;border-radius:5px;background:#e6ebf3;overflow:hidden;width:42px;display:inline-block;vertical-align:middle;margin-left:6px}
+  .mbar>span{display:block;height:100%;background:var(--green)}
+  .mini{font-size:9px;font-weight:800;letter-spacing:.03em;padding:1px 5px;border-radius:5px;vertical-align:middle}
+  .mini.ai{background:#e3edff;color:#2657c9}
+  .mini.chk{background:#fdf1d8;color:#9a6a06}
+  .actionbar{display:flex;align-items:center;gap:10px;background:var(--navy);border-radius:10px;padding:11px 15px;color:#fff}
+  .abtn{display:inline-flex;align-items:center;font-size:12.5px;font-weight:700;padding:8px 13px;border-radius:8px;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.22)}
+  .abtn.orange{background:var(--orange);border-color:var(--orange)}
+  .selcount{font-size:12.5px;font-weight:800;background:rgba(255,255,255,.16);padding:6px 11px;border-radius:20px}
+</style></head>
+<body>
+<div class="slide" style="width:1300px;height:1210px">
+  <div class="band">
+    <span class="stage-tag" style="background:rgba(47,109,246,.26);border-color:rgba(47,109,246,.6);color:#cfe0ff">RECRUITER · STEP 1D · CANDIDATES SHEET</span>
+    <h1>All your candidates in one sheet, with the filters recruiters actually use</h1>
+    <p class="sub">Looks and feels like Excel, but shared, always current and connected. Filter, edit in place, then send the right people straight into a campaign.</p>
+  </div>
+
+  <div class="body">
+    <div class="browser">
+      <div class="bbar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="url">app.recruitos.in/candidates?view=warehouse-gurgaon</span></div>
+      <div class="app">
+        <div class="nav">
+          <div class="brand">Recruitment OS</div>
+          <a><span class="ic"></span>Today</a>
+          <a><span class="ic"></span>My Data</a>
+          <a><span class="ic"></span>Requirements</a>
+          <a class="active"><span class="ic"></span>Candidates</a>
+          <a><span class="ic"></span>Interviews</a>
+          <a><span class="ic"></span>Billing</a>
+          <a><span class="ic"></span>Reports</a>
+          <a class="soon"><span class="ic"></span>Sales<span class="pill">Soon · BDE</span></a>
+        </div>
+        <div class="main">
+          <div class="h-row" style="margin-bottom:12px">
+            <div><div class="title-lg">Candidates</div>
+              <div class="muted" style="font-size:12.5px">1,284 in your database · 214 match the filters below</div></div>
+            <div style="display:flex;gap:8px"><span class="toolbtn">Columns</span><span class="toolbtn">Import</span><span class="toolbtn">Export</span></div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;position:relative">
+            <span class="cue" style="left:-11px;top:-10px">1</span>
+            <span class="search">Search name, phone, skill or company</span>
+            <span style="flex:1"></span>
+            <span class="viewtab">All candidates</span>
+            <span class="viewtab">My candidates</span>
+            <span class="viewtab">Hot list</span>
+            <span class="viewtab on">Warehouse Gurgaon</span>
+            <span class="toolbtn">Save view</span>
+          </div>
+
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px;position:relative">
+            <span class="cue" style="left:-11px;top:-10px">2</span>
+            <span class="filterchip">Role: Warehouse Executive · Acme <span class="x">✕</span></span>
+            <span class="filterchip">Stage: Interested, Screening, Interview <span class="x">✕</span></span>
+            <span class="filterchip">Location: Gurgaon, Noida <span class="x">✕</span></span>
+            <span class="filterchip">Experience: 2 to 5 yrs <span class="x">✕</span></span>
+            <span class="filterchip">Expected CTC: up to 9 L <span class="x">✕</span></span>
+            <span class="filterchip">Notice: up to 30 d <span class="x">✕</span></span>
+            <span class="addf">+ Add filter</span>
+            <span class="clearf">Clear all</span>
+          </div>
+
+          <div class="card" style="padding:14px 16px;margin-bottom:13px;position:relative">
+            <span class="cue" style="left:-11px;top:-10px">3</span>
+            <div class="filter-grid">
+              <div class="fcol"><div class="cap">Stage</div>
+                <div class="chk-line"><span class="cbx on"></span>Screening</div>
+                <div class="chk-line"><span class="cbx on"></span>Interested</div>
+                <div class="chk-line"><span class="cbx on"></span>Interview</div>
+                <div class="chk-line"><span class="cbx"></span>Offer</div>
+              </div>
+              <div class="fcol"><div class="cap">Location</div>
+                <div class="chk-line"><span class="cbx on"></span>Gurgaon</div>
+                <div class="chk-line"><span class="cbx on"></span>Noida</div>
+                <div class="chk-line"><span class="cbx"></span>Delhi</div>
+              </div>
+              <div class="fcol"><div class="cap">Experience (yrs)</div>
+                <div class="slider"><span class="fill" style="left:18%;right:38%"></span><span class="knob" style="left:16%"></span><span class="knob" style="left:60%"></span></div>
+                <div class="slbl">2 to 5</div>
+              </div>
+              <div class="fcol"><div class="cap">Expected CTC (L)</div>
+                <div class="slider"><span class="fill" style="left:0;right:32%"></span><span class="knob" style="left:0"></span><span class="knob" style="left:66%"></span></div>
+                <div class="slbl">up to 9</div>
+              </div>
+              <div class="fcol"><div class="cap">Notice period</div>
+                <div style="margin-top:4px"><span class="fchip">Immediate</span><span class="fchip on">15 d</span><span class="fchip on">30 d</span><span class="fchip">60 d</span></div>
+              </div>
+              <div class="fcol"><div class="cap">More filters</div>
+                <div class="muted" style="font-size:12px;line-height:1.5">Skills, source, owner, consent, last contacted, match score, custom fields</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="padding:6px 0 0;overflow:hidden">
+            <table class="sheet">
+              <tr>
+                <th style="width:30px"><span class="cbx on" style="border-color:#9dbcff"></span></th>
+                <th style="width:26px">#</th>
+                <th class="froz">Candidate <span style="opacity:.6;font-weight:600">(frozen)</span></th>
+                <th>Location</th><th>Exp</th><th>Skills</th><th>Exp. CTC</th><th>Notice</th><th>Stage</th><th>Match</th>
+              </tr>
+              <tr><td><span class="cbx on"></span></td><td class="muted">1</td>
+                <td class="froz"><span class="namecell"><span class="av-sm">RV</span><b>Rahul Verma</b></span></td>
+                <td>Gurgaon</td><td>3.0</td><td>WMS, Inventory</td><td>7.0 L</td><td>15 d</td>
+                <td><span class="chip green">Interested</span></td><td>92<span class="mbar"><span style="width:92%"></span></span></td></tr>
+              <tr><td><span class="cbx on"></span></td><td class="muted">2</td>
+                <td class="froz"><span class="namecell"><span class="av-sm">SY</span><b>Sunil Yadav</b></span></td>
+                <td>Gurgaon</td><td>4.0</td><td>WMS, SAP</td><td><span class="cell-edit">8.5 L</span></td><td>30 d</td>
+                <td><span class="chip blue">Screening</span></td><td>86<span class="mbar"><span style="width:86%"></span></span></td></tr>
+              <tr><td><span class="cbx on"></span></td><td class="muted">3</td>
+                <td class="froz"><span class="namecell"><span class="av-sm">AR</span><b>Anita Rao</b></span></td>
+                <td>Gurgaon</td><td>2.5</td><td>Inventory, Excel</td><td>6.0 L</td><td>15 d <span class="mini ai">AI</span></td>
+                <td><span class="chip green">Interested</span></td><td>81<span class="mbar"><span style="width:81%"></span></span></td></tr>
+              <tr><td><span class="cbx"></span></td><td class="muted">4</td>
+                <td class="froz"><span class="namecell"><span class="av-sm">VS</span><b>Vikram Singh</b></span></td>
+                <td>Noida</td><td>5.0</td><td>WMS, Team lead</td><td class="muted">—</td><td>30 d</td>
+                <td><span class="chip blue">Interview</span></td><td>74<span class="mbar"><span style="width:74%"></span></span></td></tr>
+              <tr><td><span class="cbx"></span></td><td class="muted">5</td>
+                <td class="froz"><span class="namecell"><span class="av-sm">PN</span><b>Pooja Nair</b></span></td>
+                <td>Gurgaon</td><td>3.5</td><td>Forklift, WMS</td><td>7.5 L</td><td>30 d <span class="mini chk">check</span></td>
+                <td><span class="chip blue">Screening</span></td><td>70<span class="mbar"><span style="width:70%"></span></span></td></tr>
+              <tr><td><span class="cbx"></span></td><td class="muted">6</td>
+                <td class="froz"><span class="namecell"><span class="av-sm">IK</span><b>Imran Khan</b></span></td>
+                <td>Noida</td><td>2.0</td><td>Picking, Packing</td><td>5.2 L</td><td>Immediate</td>
+                <td><span class="chip blue">Screening</span></td><td>68<span class="mbar"><span style="width:68%"></span></span></td></tr>
+              <tr><td><span class="cbx"></span></td><td class="muted">7</td>
+                <td class="froz"><span class="namecell"><span class="av-sm">MI</span><b>Meera Iyer</b></span></td>
+                <td>Noida</td><td>3.0</td><td>Inventory, Audit</td><td>6.8 L</td><td>30 d</td>
+                <td><span class="chip blue">Interview</span></td><td>63<span class="mbar"><span style="width:63%"></span></span></td></tr>
+              <tr><td><span class="cbx"></span></td><td class="muted">8</td>
+                <td class="froz"><span class="namecell"><span class="av-sm">KM</span><b>Karan Malik</b></span></td>
+                <td>Gurgaon</td><td>3.0</td><td>WMS, Dispatch</td><td>7.2 L</td><td>30 d</td>
+                <td><span class="chip green">Interested</span></td><td>61<span class="mbar"><span style="width:61%"></span></span></td></tr>
+            </table>
+            <div class="actionbar" style="margin:10px;position:relative">
+              <span class="cue" style="left:-11px;top:-11px">4</span>
+              <span class="selcount">3 selected</span>
+              <span class="abtn orange">Create campaign</span>
+              <span class="abtn">Add to requirement</span>
+              <span class="abtn">Send WhatsApp</span>
+              <span class="abtn">Assign owner</span>
+              <span style="flex:1"></span>
+              <span style="font-size:12px;color:#aeb9d4">Showing 8 of 214</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <h4>What each number means</h4>
+      <div class="item"><span class="num">1</span><p><b>Search and saved views.</b> Find anyone by name, phone or skill. Save a filter set as a view, such as “Warehouse Gurgaon”, and reopen it in one click.</p></div>
+      <div class="item"><span class="num">2</span><p><b>Filters you can see.</b> Chips show what is applied. The filter bar has the controls: stage, location, experience, expected CTC and notice period, plus skills, source, owner, consent, last contacted, match score and the desk's custom fields.</p></div>
+      <div class="item"><span class="num">3</span><p><b>A real sheet.</b> Frozen name column and header, sort by any column, click a cell to edit. Values filled by the AI carry an “AI” or “check” chip until a person confirms.</p></div>
+      <div class="item"><span class="num">4</span><p><b>Select, then act.</b> Tick rows and start a campaign, add to a requirement, message on WhatsApp or assign an owner. No export and re-import.</p></div>
+      <div class="note"><b>Under the hood:</b> a grid on the shared candidates table (AG Grid, per the technical plan). Filters run on system fields and the TL's custom fields. Recruiters see their own rows; Team Leads see the desk. Every edit is logged.</div>
+    </div>
+  </div>
+
+  <div class="foot"><b>Why it matters:</b> recruiters keep the sheet habit they already have, but the data is shared, de-duplicated and one click from a campaign.</div>
+  <div class="brandfoot"><span>Recruitment OS · Recruiter Flow</span><span>Screen 15 — Candidates sheet view</span></div>
+</div>
+</body></html>

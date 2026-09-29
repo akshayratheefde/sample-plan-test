@@ -14,6 +14,6 @@ An AI-first operating system for a recruitment agency, built **recruiter-first**
 
 ## Screens
 
-15 rendered UI mockups live in [`recruitment-os-plan/assets/img/`](recruitment-os-plan/assets/img/). Editable source (HTML + `ui.css`) is in [`recruitment-os-plan/assets/src/`](recruitment-os-plan/assets/src/); re-render any screen with `assets/src/r.sh <name> <width> <height>`.
+18 rendered UI mockups live in [`recruitment-os-plan/assets/img/`](recruitment-os-plan/assets/img/). Editable source (HTML + `ui.css`) is in [`recruitment-os-plan/assets/src/`](recruitment-os-plan/assets/src/); re-render any screen with `assets/src/r.sh <name> <width> <height>`.
 
 > The markdown files contain **mermaid diagrams** and embedded screen images — both render natively on GitHub.
