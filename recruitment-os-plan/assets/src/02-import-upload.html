@@ -1,0 +1,102 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="ui.css"></head>
+<body>
+<div class="slide" style="width:1300px;height:880px">
+  <div class="band">
+    <span class="stage-tag" style="background:rgba(18,165,148,.24);border-color:rgba(18,165,148,.6);color:#c6f4ec">RECRUITER &amp; TEAM LEAD · DATA UPLOAD · STEP 1 OF 4</span>
+    <h1>Bring your data in any format</h1>
+    <p class="sub">Excel, CSV, JSON or a Google Sheet link. We read messy files so nobody retypes a single row.</p>
+  </div>
+
+  <div class="body">
+    <div class="browser">
+      <div class="bbar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="url">app.recruitos.in/my-data/import</span></div>
+      <div class="app">
+        <div class="nav">
+          <div class="brand">Recruitment OS</div>
+          <a><span class="ic"></span>Today</a>
+          <a class="active"><span class="ic"></span>My Data</a>
+          <a><span class="ic"></span>Requirements</a>
+          <a><span class="ic"></span>Candidates</a>
+          <a><span class="ic"></span>Interviews</a>
+          <a><span class="ic"></span>Billing</a>
+          <a><span class="ic"></span>Reports</a>
+          <a class="soon"><span class="ic"></span>Sales<span class="pill">Soon · BDE</span></a>
+        </div>
+        <div class="main">
+          <div class="step-dots" style="margin-bottom:16px;position:relative">
+            <span class="cue" style="left:60px;top:-6px">1</span>
+            <div class="s on"><span class="b">1</span>Upload</div><span class="lnk"></span>
+            <div class="s"><span class="b">2</span>Map columns</div><span class="lnk"></span>
+            <div class="s"><span class="b">3</span>Review &amp; fix</div><span class="lnk"></span>
+            <div class="s"><span class="b">4</span>Done</div>
+          </div>
+
+          <div style="position:relative">
+            <span class="cue" style="right:2px;top:-6px">2</span>
+            <div class="dropzone">
+              <div style="width:56px;height:56px;border-radius:14px;background:#eaf1ff;margin:0 auto 12px;display:flex;align-items:center;justify-content:center">
+                <div class="ar dn" style="border-left-color:#2f6df6;border-left-width:16px;border-top-width:11px;border-bottom-width:11px;margin:0"></div></div>
+              <div style="font-size:16px;font-weight:800">Drag your file here, or <span style="color:var(--blue)">browse</span></div>
+              <div class="muted" style="font-size:13px;margin-top:5px">Up to 50&nbsp;MB. We keep the original so you can undo anytime.</div>
+              <div style="margin-top:13px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+                <span class="chip green">.xlsx</span><span class="chip green">.xls</span>
+                <span class="chip amber">.csv</span><span class="chip purple">.json</span>
+                <span class="chip blue">Google Sheet link</span><span class="chip grey">.tsv</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin:18px 0 8px;position:relative">
+            <p class="title-sm" style="margin:0">What is in this file?<span class="cue" style="left:158px;top:-8px">3</span></p>
+          </div>
+          <div class="grid3">
+            <div class="card" style="border:1.5px solid var(--blue);background:#f7faff">
+              <div style="font-weight:800;font-size:14px">Candidates</div>
+              <div class="muted" style="font-size:12px;margin-top:3px">People &amp; CVs</div>
+            </div>
+            <div class="card">
+              <div style="font-weight:800;font-size:14px">Requirements</div>
+              <div class="muted" style="font-size:12px;margin-top:3px">Open jobs / roles</div>
+            </div>
+            <div class="card">
+              <div style="font-weight:800;font-size:14px">Both / not sure</div>
+              <div class="muted" style="font-size:12px;margin-top:3px">Let AI detect <span class="chip teal" style="margin-left:2px">auto</span></div>
+            </div>
+          </div>
+
+          <div style="margin:18px 0 8px;position:relative">
+            <p class="title-sm" style="margin:0">Recently uploaded<span class="cue" style="left:132px;top:-8px">4</span></p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div class="filerow"><span class="ficon xls">XLSX</span>
+              <div style="flex:1"><b style="font-size:13px">Neha_warehouse_pipeline.xlsx</b>
+                <div class="muted" style="font-size:11.5px">312 rows · 14 columns · candidates</div></div>
+              <span class="chip green"><span class="tick" style="width:13px;height:13px"></span>Imported</span></div>
+            <div class="filerow"><span class="ficon csv">CSV</span>
+              <div style="flex:1"><b style="font-size:13px">acme_open_roles.csv</b>
+                <div class="muted" style="font-size:11.5px">3 rows · 9 columns · requirements</div></div>
+              <span class="chip amber">Mapping…</span></div>
+            <div class="filerow"><span class="ficon json">JSON</span>
+              <div style="flex:1"><b style="font-size:13px">portal_export.json</b>
+                <div class="muted" style="font-size:11.5px">88 records · nested · candidates</div></div>
+              <span class="chip blue">Review 6 rows</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <h4>What each number means</h4>
+      <div class="item"><span class="num">1</span><p><b>Four calm steps.</b> Upload <span class="ar sm"></span> Map columns <span class="ar sm"></span> Review &amp; fix <span class="ar sm"></span> Done. The recruiter is guided; nothing is required except confirming.</p></div>
+      <div class="item"><span class="num">2</span><p><b>Any format.</b> Excel, CSV, JSON, TSV or a Google Sheet link. The original file is stored, so every import can be <b>undone</b>.</p></div>
+      <div class="item"><span class="num">3</span><p><b>One question in plain words.</b> “What is in this file?” If unsure, AI auto-detects whether rows are people or jobs.</p></div>
+      <div class="item"><span class="num">4</span><p><b>Status at a glance.</b> Green = imported, amber = still mapping, blue = a few rows need a human eye. No jargon.</p></div>
+      <div class="note"><b>Why this matters:</b> every TL and recruiter already keeps their own spreadsheet. This screen accepts <i>their</i> format instead of forcing a new one — the universal single data model is built quietly behind the scenes.</div>
+    </div>
+  </div>
+
+  <div class="foot"><b>Under the hood:</b> files are parsed client-side (Excel via SheetJS, CSV via a streaming parser, JSON natively), then staged — nothing touches the live database until Step 4 is confirmed.</div>
+  <div class="brandfoot"><span>Recruitment OS · Recruiter Flow</span><span>Screen 2 — Data Upload (multi-format)</span></div>
+</div>
+</body></html>

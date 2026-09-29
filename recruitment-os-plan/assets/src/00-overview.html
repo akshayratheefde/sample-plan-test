@@ -1,0 +1,81 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="ui.css">
+<style>
+  .stg{flex:1;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 14px;position:relative}
+  .stg .no{position:absolute;top:-11px;left:14px;width:24px;height:24px;border-radius:50%;color:#fff;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center}
+  .stg .nm{font-size:14px;font-weight:800;margin-bottom:4px}
+  .stg .dd{font-size:11.5px;color:var(--muted);line-height:1.4}
+  .stg .ai{font-size:10px;font-weight:800;letter-spacing:.05em;color:var(--teal);text-transform:uppercase;margin-top:8px}
+  .sep{display:flex;align-items:center}
+  .future-strip{display:flex;gap:10px;background:#eef1f6;border:1px dashed #b7c2d8;border-radius:12px;padding:12px 14px;align-items:center}
+  .fbox{flex:1;background:#fff;border:1px solid #e2e7f0;border-radius:9px;padding:9px 11px;opacity:.85}
+  .fbox .nm{font-size:12.5px;font-weight:800;color:#7a86a2}
+  .fbox .dd{font-size:10.5px;color:#9aa6c0}
+</style></head>
+<body>
+<div class="slide" style="width:1300px;height:952px">
+  <div class="band">
+    <span class="stage-tag" style="background:rgba(18,165,148,.24);border-color:rgba(18,165,148,.6);color:#c6f4ec">RECRUITER FLOW · THE WHOLE JOURNEY ON ONE PAGE</span>
+    <h1>From your spreadsheet to a placed candidate</h1>
+    <p class="sub">Eight connected steps. Data moves left to right and is never typed twice. The AI does the busywork; the recruiter decides.</p>
+  </div>
+
+  <div style="padding:22px 40px 0">
+    <!-- future scope BDE strip -->
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px">
+      <div style="width:150px;flex-shrink:0">
+        <span class="chip" style="background:#ffe4c9;color:#b4560a;font-weight:800">FUTURE SCOPE · BDE</span>
+        <div class="muted" style="font-size:11px;margin-top:5px;line-height:1.35">Sales team module, planned for a later release</div>
+      </div>
+      <div class="future-strip" style="flex:1">
+        <div class="fbox"><div class="nm">Intake</div><div class="dd">Any message becomes a draft</div></div>
+        <div class="sep"><span class="ar sm lt"></span></div>
+        <div class="fbox"><div class="nm">Lead to Client</div><div class="dd">Sales pipeline, CRM</div></div>
+        <div class="sep"><span class="ar sm lt"></span></div>
+        <div class="fbox"><div class="nm">Client terms</div><div class="dd">Contract, versioned fee</div></div>
+        <div class="sep"><span class="ar sm"></span></div>
+        <div style="font-size:11.5px;color:#6b7896;width:120px;line-height:1.4"><b style="color:#3a476a">Today:</b> a role can instead arrive by <b>upload</b> or a quick manual add.</div>
+      </div>
+    </div>
+
+    <!-- recruiter chain row 1 -->
+    <div style="display:flex;gap:10px;align-items:stretch;margin-bottom:16px">
+      <div class="stg" style="border-top:3px solid var(--green)"><div class="no" style="background:var(--green)">1</div>
+        <div class="nm">Upload data</div><div class="dd">Excel, CSV, JSON or Sheet — any format</div><div class="ai">AI · maps &amp; cleans</div></div>
+      <div class="sep"><span class="ar sm"></span></div>
+      <div class="stg" style="border-top:3px solid var(--blue)"><div class="no" style="background:var(--blue)">2</div>
+        <div class="nm">Smart Match</div><div class="dd">Ranks the best people, with reasons</div><div class="ai">AI · scores fit</div></div>
+      <div class="sep"><span class="ar sm"></span></div>
+      <div class="stg" style="border-top:3px solid var(--orange)"><div class="no" style="background:var(--orange)">3</div>
+        <div class="nm">Create campaign</div><div class="dd">Pick pool, script, channel — one button</div><div class="ai">Recruiter · launches</div></div>
+      <div class="sep"><span class="ar sm"></span></div>
+      <div class="stg" style="border-top:3px solid var(--purple)"><div class="no" style="background:var(--purple)">4</div>
+        <div class="nm">Engagement engine</div><div class="dd">Voice + WhatsApp screening, on autopilot</div><div class="ai">AI · runs lifecycle</div></div>
+    </div>
+
+    <!-- recruiter chain row 2 -->
+    <div style="display:flex;gap:10px;align-items:stretch">
+      <div class="stg" style="border-top:3px solid var(--teal)"><div class="no" style="background:var(--teal)">5</div>
+        <div class="nm">Pipeline &amp; interviews</div><div class="dd">Auto-moved stages, slots &amp; client feedback</div><div class="ai">AI · schedules, chases</div></div>
+      <div class="sep"><span class="ar sm"></span></div>
+      <div class="stg" style="border-top:3px solid var(--teal)"><div class="no" style="background:var(--teal)">6</div>
+        <div class="nm">Offer &amp; joining</div><div class="dd">Docs chased, back-out risk, joining check</div><div class="ai">AI · protects the placement</div></div>
+      <div class="sep"><span class="ar sm"></span></div>
+      <div class="stg" style="border-top:3px solid var(--teal)"><div class="no" style="background:var(--teal)">7</div>
+        <div class="nm">Replacement</div><div class="dd">Timers &amp; check-ins; auto replacement job</div><div class="ai">AI · runs clocks</div></div>
+      <div class="sep"><span class="ar sm"></span></div>
+      <div class="stg" style="border-top:3px solid #a86a12"><div class="no" style="background:#a86a12">8</div>
+        <div class="nm">Billing <span class="chip amber" style="font-size:9px">next focus</span></div><div class="dd">Eligibility computed, invoice pre-filled</div><div class="ai" style="color:#a86a12">Finance · one click</div></div>
+    </div>
+
+    <div class="foot" style="margin:20px 0 0"><b>Data chain (never re-entered):</b> Upload <span class="ar sm"></span> Candidate &amp; Requirement <span class="ar sm"></span> Match <span class="ar sm"></span> Campaign <span class="ar sm"></span> Screening answers <span class="ar sm"></span> Application &amp; stage <span class="ar sm"></span> Interview <span class="ar sm"></span> Joining <span class="ar sm"></span> Replacement window <span class="ar sm"></span> Invoice.</div>
+
+    <div style="display:flex;gap:12px;margin-top:16px">
+      <div class="card" style="flex:1;border-left:3px solid var(--blue)"><b style="font-size:13px">Built for non-tech recruiters</b><div class="muted" style="font-size:12px;margin-top:4px;line-height:1.45">Three verbs to learn — Upload, Match, Launch. Plain words, one next action, forms arrive pre-filled.</div></div>
+      <div class="card" style="flex:1;border-left:3px solid var(--purple)"><b style="font-size:13px">AI does the busywork</b><div class="muted" style="font-size:12px;margin-top:4px;line-height:1.45">Mapping, matching, calling, chasing and lifecycle moves run on their own; the recruiter confirms and decides.</div></div>
+      <div class="card" style="flex:1;border-left:3px solid #a86a12"><b style="font-size:13px">Build order</b><div class="muted" style="font-size:12px;margin-top:4px;line-height:1.45"><b>1.</b> Recruiter flow (this document) · <b>2.</b> Billing dept · <b>3.</b> BDE / Sales — future scope.</div></div>
+    </div>
+  </div>
+
+  <div class="brandfoot" style="margin-top:16px"><span>Recruitment OS · Recruiter Flow</span><span>Overview — The whole journey on one page</span></div>
+</div>
+</body></html>

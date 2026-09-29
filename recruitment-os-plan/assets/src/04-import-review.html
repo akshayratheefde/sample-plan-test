@@ -1,0 +1,93 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="ui.css"></head>
+<body>
+<div class="slide" style="width:1300px;height:876px">
+  <div class="band">
+    <span class="stage-tag" style="background:rgba(18,165,148,.24);border-color:rgba(18,165,148,.6);color:#c6f4ec">RECRUITER &amp; TEAM LEAD · DATA UPLOAD · STEP 3 OF 4</span>
+    <h1>We fix the mess, you check a handful of rows</h1>
+    <p class="sub">Dates, phone numbers and duplicates are cleaned automatically. Only the rows we're unsure about ask for you.</p>
+  </div>
+
+  <div class="body">
+    <div class="browser">
+      <div class="bbar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="url">app.recruitos.in/my-data/import/review</span></div>
+      <div class="app">
+        <div class="nav">
+          <div class="brand">Recruitment OS</div>
+          <a><span class="ic"></span>Today</a>
+          <a class="active"><span class="ic"></span>My Data</a>
+          <a><span class="ic"></span>Requirements</a>
+          <a><span class="ic"></span>Candidates</a>
+          <a><span class="ic"></span>Interviews</a>
+          <a><span class="ic"></span>Billing</a>
+          <a><span class="ic"></span>Reports</a>
+          <a class="soon"><span class="ic"></span>Sales<span class="pill">Soon · BDE</span></a>
+        </div>
+        <div class="main">
+          <div class="step-dots" style="margin-bottom:15px">
+            <div class="s done"><span class="b"></span>Upload</div><span class="lnk"></span>
+            <div class="s done"><span class="b"></span>Map columns</div><span class="lnk"></span>
+            <div class="s on"><span class="b">3</span>Review &amp; fix</div><span class="lnk"></span>
+            <div class="s"><span class="b">4</span>Done</div>
+          </div>
+
+          <div class="grid4" style="margin-bottom:14px;position:relative">
+            <span class="cue" style="left:-10px;top:-10px">1</span>
+            <div class="stat"><div class="n" style="color:var(--green)">298</div><div class="l">Ready to import</div></div>
+            <div class="stat"><div class="n" style="color:var(--amber)">8</div><div class="l">Need a quick check</div></div>
+            <div class="stat"><div class="n" style="color:var(--blue)">5</div><div class="l">Possible duplicates</div></div>
+            <div class="stat"><div class="n" style="color:var(--red)">1</div><div class="l">Cannot read</div></div>
+          </div>
+
+          <div class="card" style="padding:6px 14px 10px;position:relative">
+            <span class="cue" style="right:2px;top:-10px">2</span>
+            <table class="tbl">
+              <tr><th>Row</th><th>Name</th><th>Phone</th><th>Salary</th><th>What we did</th><th>Action</th></tr>
+              <tr><td>7</td><td>Rahul Verma</td><td>+91 98xxxx21</td><td>₹7,00,000</td>
+                <td><span class="chip green">cleaned</span> “7 LPA” read as amount</td><td><span class="muted">auto</span></td></tr>
+              <tr><td>22</td><td>Sunil Yadav</td><td>+91 90xxxx88</td><td><span style="color:#9a6a06">12–15k?</span></td>
+                <td><span class="chip amber">confirm</span> monthly or yearly?</td><td><span class="chip amber">Pick</span></td></tr>
+              <tr><td>41</td><td>Imran Khan</td><td>+91 99xxxx03</td><td>₹4,50,000</td>
+                <td><span class="chip blue">duplicate</span> matches existing Imran K.</td><td><span class="chip blue">Merge</span></td></tr>
+              <tr><td>58</td><td>Pooja Sharma</td><td><span style="color:#b23125">missing</span></td><td>₹6,00,000</td>
+                <td><span class="chip red">no phone</span> can't contact later</td><td><span class="chip red">Add</span></td></tr>
+              <tr><td>63</td><td>Anita Rao</td><td>+91 98xxxx77</td><td>₹5,20,000</td>
+                <td><span class="chip green">cleaned</span> date “5-9-26” fixed</td><td><span class="muted">auto</span></td></tr>
+            </table>
+          </div>
+
+          <div class="grid2" style="margin-top:14px">
+            <div class="soft-card" style="position:relative;background:#f7fbf8;border-color:#cfe9d6">
+              <span class="cue" style="left:-10px;top:-10px">3</span>
+              <b style="font-size:13px">Duplicates are caught, not created</b>
+              <div class="muted" style="font-size:12px;margin-top:4px;line-height:1.45">We match on phone, then email, then name — so re-uploading next week <b>updates</b> people instead of making twins. This is where plain spreadsheets fail.</div>
+            </div>
+            <div class="soft-card" style="position:relative;background:#f7faff;border-color:#d5e4ff">
+              <span class="cue" style="left:-10px;top:-10px">4</span>
+              <b style="font-size:13px">Nothing is lost</b>
+              <div class="muted" style="font-size:12px;margin-top:4px;line-height:1.45">The one unreadable row is quarantined, not dropped. You can fix and re-import it, or undo the whole batch for 30 days.</div>
+            </div>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px">
+            <span class="muted" style="font-size:12px">298 will import now · 14 held for you</span>
+            <div style="display:flex;gap:10px"><span class="btn ghost">Back</span><span class="btn green">Import 298 &amp; keep 14 open</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <h4>What each number means</h4>
+      <div class="item"><span class="num">1</span><p><b>Traffic-light summary.</b> Before anything is saved, the recruiter sees exactly how clean the file is — ready, check, duplicate, unreadable.</p></div>
+      <div class="item"><span class="num">2</span><p><b>Only the exceptions.</b> Clean rows say “auto”. The recruiter's attention goes only to the few rows that genuinely need a decision.</p></div>
+      <div class="item"><span class="num">3</span><p><b>De-duplication built in.</b> Matching on phone/email/name prevents the twin-record problem that makes shared spreadsheets rot over time.</p></div>
+      <div class="item"><span class="num">4</span><p><b>Safe &amp; reversible.</b> Bad rows are quarantined, and the whole import can be undone for 30 days. People trust a tool they can't break.</p></div>
+      <div class="note"><b>Result:</b> a messy, personal Excel becomes clean rows in the shared database — with the recruiter making only a handful of taps.</div>
+    </div>
+  </div>
+
+  <div class="foot"><b>Under the hood:</b> per-field validation &amp; type coercion (dates, currency, phone), entity-resolution for de-dup, and a staged batch that commits to the canonical store only on confirm.</div>
+  <div class="brandfoot"><span>Recruitment OS · Recruiter Flow</span><span>Screen 4 — Review, Validate &amp; De-duplicate</span></div>
+</div>
+</body></html>
