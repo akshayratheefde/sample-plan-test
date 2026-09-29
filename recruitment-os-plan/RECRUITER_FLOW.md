@@ -110,6 +110,21 @@ The TL is where **flexibility is governed** so it never becomes chaos.
 
 ---
 
+## Step 1d · All candidates in one sheet
+
+![Candidates sheet view](assets/img/15-candidates-sheet.png)
+
+Once the data is in, the recruiter works the way they already do — in a sheet — but a **shared, always-current** one. It looks and feels like Excel, carries the filters recruiters actually use, and is one click from a campaign.
+
+- **① Search & saved views** — find anyone by name, phone or skill; save a filter set (e.g. "Warehouse Gurgaon") and reopen it in one click.
+- **② Filters you can see** — chips show what's applied: stage, location, experience, expected CTC and notice period, plus skills, source, owner, consent, last contacted, match score and the desk's custom fields.
+- **③ A real sheet** — frozen name column and header, sort by any column, edit a cell in place. AI-filled values carry an "AI" or "check" chip until a person confirms.
+- **④ Select, then act** — tick rows and **Create campaign**, **Add to requirement**, **Send WhatsApp** or **Assign owner** — no export, no re-import.
+
+**Under the hood:** a grid over the shared candidates table (AG Grid, per the technical plan). Filters run on system fields *and* the TL's custom fields; recruiters see their own rows, Team Leads see the whole desk, and every edit is logged.
+
+---
+
 ## Step 2 · The requirement (the role to fill)
 
 ![Requirement — simplified](assets/img/06-requirement.png)
@@ -140,6 +155,22 @@ The system suggests the best people from your own database first — ranked and 
 
 ---
 
+## Step 3a · Team Lead · AI agent & prompt setup
+
+![AI agent & prompt setup](assets/img/17-agent-prompt-setup.png)
+
+Before a campaign dials anyone, the **AI screening agent comes pre-filled** for the role — a safe prompt and a ready question set. The Team Lead tunes the wording; the variables and guardrails keep it safe.
+
+- **① Identity, fixed where it matters** — name and who it represents are editable; "say it is an AI and ask to record" is locked on for compliance.
+- **② Language & voice** — Hindi, English or Hinglish (switches mid-call), with voice and calling window per desk.
+- **③ Pre-filled prompt** — the system ships a working prompt; the TL edits the wording but keeps the `{{variables}}` that fill in per candidate and role.
+- **④ Questions the desk owns** — reorder, edit, toggle on/off or add; the *same* questions feed the voice call, the WhatsApp chat and the recruiter's manual screening.
+- **⑤ Guardrails** — safety rules are toggles; the critical ones (consent, opt-out) are locked and can't be disabled.
+
+**Versioned & approved:** edits become a new draft that goes live only after Admin sign-off, and every change is logged (who, what, when). This is the single script that **Create campaign** reuses and the **Engagement engine** runs.
+
+---
+
 ## Step 3b · Create a campaign
 
 ![Create campaign](assets/img/08-campaign-new.png)
@@ -151,6 +182,21 @@ The system suggests the best people from your own database first — ranked and 
 - **⑤ One button** — "Launch" hands the outreach to the engagement engine.
 
 **Guardrails built in:** consent + opt-out logged, calling-hours & do-not-disturb respected, approved templates only, and any commitment on money/offers always waits for a human.
+
+---
+
+## Step 3c · Campaign management
+
+![Campaign management](assets/img/16-campaign-manage.png)
+
+Every campaign — running, scheduled or done — sits on one screen, so a recruiter or TL sees what the engine is doing across all roles and jumps straight onto the hot lists.
+
+- **① Control tower** — live totals across every campaign: reached, interested and interviews booked today.
+- **② One card per campaign** — channel, progress and the four outcomes on a single line, with the single most useful next action on the right (Review hot / Watch live / Edit / Duplicate).
+- **③ Filter by state** — All / Running / Scheduled / Completed; the coloured dot repeats the state on each card.
+- **④ Manage without micromanaging** — pause/resume, take over a conversation, duplicate for a new role, or push the hot list into the pipeline — the engine keeps running in the background either way.
+
+Each card opens the live **Candidate Engagement Engine** (next screen); the script it runs comes from the **Agent & prompt setup** the Team Lead controls.
 
 ---
 
@@ -339,5 +385,8 @@ flowchart LR
 | 12 | Offer & joining | `assets/img/12-offer-joining.png` |
 | 13 | Replacement tracking | `assets/img/13-replacement.png` |
 | 14 | Billing handoff (Finance) | `assets/img/14-billing.png` |
+| 15 | Candidates sheet view | `assets/img/15-candidates-sheet.png` |
+| 16 | Campaign management | `assets/img/16-campaign-manage.png` |
+| 17 | AI agent & prompt setup (Team Lead) | `assets/img/17-agent-prompt-setup.png` |
 
 > Screens are rendered mockups (HTML → PNG). Editable source is in `assets/src/` (`*.html`, `ui.css`); re-render any screen with `assets/src/r.sh <name> <width> <height>`.

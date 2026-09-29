@@ -1,0 +1,145 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="ui.css">
+<style>
+  .ctab{display:inline-block;font-size:12.5px;font-weight:700;padding:7px 15px;border-radius:8px;border:1px solid #cfd8e6;color:#556;background:#fff}
+  .ctab.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .ccard{background:#fff;border:1px solid var(--line);border-radius:11px;padding:13px 15px 13px 16px;position:relative;overflow:hidden}
+  .ccard::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px}
+  .ccard.run::before{background:var(--green)}
+  .ccard.run2::before{background:var(--purple)}
+  .ccard.sch::before{background:var(--amber)}
+  .ccard.done::before{background:#9aa6c0}
+  .crow1{display:flex;align-items:center;gap:9px}
+  .cname{font-size:14.5px;font-weight:800}
+  .who{font-size:12px;color:var(--muted)}
+  .state{margin-left:auto;font-size:12.5px;font-weight:700;display:flex;align-items:center;gap:6px}
+  .sdot{width:9px;height:9px;border-radius:50%}
+  .crow2{display:flex;align-items:center;gap:9px;margin-top:11px}
+  .oc{font-size:11.5px;font-weight:700;padding:4px 9px;border-radius:20px}
+  .oc.g{background:#e2f6ea;color:#12793f}.oc.k{background:#e9edf4;color:#5c6a86}
+  .oc.a{background:#fdf1d8;color:#9a6a06}.oc.r{background:#fde3e0;color:#b93125}.oc.b{background:#e3edff;color:#2657c9}
+  .reach{font-size:12px;color:#48567a;font-weight:600;white-space:nowrap}
+  .cbar{height:9px;border-radius:6px;background:#e6ebf3;overflow:hidden;width:150px}
+  .cbar>span{display:block;height:100%}
+  .nextbtn{margin-left:auto;font-size:12.5px;font-weight:700;padding:8px 14px;border-radius:8px;white-space:nowrap}
+  .nextbtn.orange{background:var(--orange);color:#fff}
+  .nextbtn.blue{background:var(--blue);color:#fff}
+  .nextbtn.ghost{background:#fff;border:1px solid #cfd8e6;color:#3a476a}
+  .consent{font-size:11.5px;font-weight:600;color:#5c6a86;background:#eef2f8;border:1px solid #dde4ee;border-radius:20px;padding:4px 11px}
+</style></head>
+<body>
+<div class="slide" style="width:1300px;height:1085px">
+  <div class="band">
+    <span class="stage-tag" style="background:rgba(242,118,12,.24);border-color:rgba(242,118,12,.6);color:#ffd9b3">RECRUITER · CAMPAIGN MANAGEMENT</span>
+    <h1>Every campaign in one place — running, scheduled and done</h1>
+    <p class="sub">See what the engine is doing across all your roles, jump into the hot lists, and start a new campaign in a click.</p>
+  </div>
+
+  <div class="body">
+    <div class="browser">
+      <div class="bbar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="url">app.recruitos.in/campaigns</span></div>
+      <div class="app">
+        <div class="nav">
+          <div class="brand">Recruitment OS</div>
+          <a><span class="ic"></span>Today</a>
+          <a><span class="ic"></span>My Data</a>
+          <a><span class="ic"></span>Requirements</a>
+          <a class="active"><span class="ic"></span>Candidates</a>
+          <a><span class="ic"></span>Interviews</a>
+          <a><span class="ic"></span>Billing</a>
+          <a><span class="ic"></span>Reports</a>
+          <a class="soon"><span class="ic"></span>Sales<span class="pill">Soon · BDE</span></a>
+        </div>
+        <div class="main">
+          <div class="h-row" style="margin-bottom:14px">
+            <div><div class="title-lg">Campaigns</div>
+              <div class="muted" style="font-size:12.5px">Voice &amp; WhatsApp outreach run by the engagement engine</div></div>
+            <span class="btn orange">+ New campaign</span>
+          </div>
+
+          <div class="grid4" style="margin-bottom:16px;position:relative">
+            <span class="cue" style="left:-10px;top:-10px">1</span>
+            <div class="stat"><div class="n" style="color:var(--green)">3</div><div class="l">Running now</div></div>
+            <div class="stat"><div class="n" style="color:var(--blue)">214</div><div class="l">Reached today</div></div>
+            <div class="stat"><div class="n" style="color:var(--green)">86</div><div class="l">Interested</div></div>
+            <div class="stat"><div class="n" style="color:var(--muted)">12</div><div class="l">Interviews booked</div></div>
+          </div>
+
+          <div style="display:flex;gap:9px;margin-bottom:14px;position:relative">
+            <span class="ctab on">All</span><span class="ctab">Running</span><span class="ctab">Scheduled</span><span class="ctab">Completed</span>
+            <span class="cue" style="right:-6px;top:-10px">3</span>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div class="ccard run" style="position:relative">
+              <span class="cue" style="left:-11px;top:-11px">2</span>
+              <div class="crow1"><span class="cname">Warehouse Executive · Acme</span>
+                <span class="chip blue">Both · WA first</span>
+                <span class="who">Neha · started 2h ago</span>
+                <span class="state" style="color:var(--green)"><span class="sdot" style="background:var(--green)"></span>Running</span></div>
+              <div class="crow2">
+                <span class="cbar"><span style="width:64%;background:var(--blue)"></span></span>
+                <span class="reach">82 of 128 reached</span>
+                <span class="oc g">34 interested</span><span class="oc k">21 no</span><span class="oc a">11 later</span><span class="oc r">16 no-ans</span>
+                <span class="nextbtn orange">Review 34 hot</span></div>
+            </div>
+
+            <div class="ccard run2">
+              <div class="crow1"><span class="cname">Developer · Zen Fintech</span>
+                <span class="chip purple">Voice AI</span>
+                <span class="who">Amit · started 40m ago</span>
+                <span class="state" style="color:var(--green)"><span class="sdot" style="background:var(--green)"></span>Running</span></div>
+              <div class="crow2">
+                <span class="cbar"><span style="width:57%;background:var(--purple)"></span></span>
+                <span class="reach">120 of 210 reached</span>
+                <span class="oc g">38 interested</span><span class="oc k">44 no</span><span class="oc a">18 later</span><span class="oc r">20 no-ans</span>
+                <span class="nextbtn blue">Watch live</span></div>
+            </div>
+
+            <div class="ccard sch">
+              <div class="crow1"><span class="cname">Driver · Urban Foods</span>
+                <span class="chip purple">Voice AI</span>
+                <span class="who">Ravi · pool 340</span>
+                <span class="state" style="color:#9a6a06"><span class="sdot" style="background:var(--amber)"></span>Scheduled · 10:00</span></div>
+              <div class="crow2">
+                <span class="cbar"><span style="width:0%"></span></span>
+                <span class="reach">Starts in 45 min</span>
+                <span class="consent">consent: 318 ok · 22 to opt-in</span>
+                <span class="nextbtn ghost">Edit / Start now</span></div>
+            </div>
+
+            <div class="ccard done">
+              <div class="crow1"><span class="cname">Accountant · Kapoor Textiles</span>
+                <span class="chip green">WhatsApp</span>
+                <span class="who">Neha · finished yesterday</span>
+                <span class="state" style="color:#5c6a86"><span class="sdot" style="background:#9aa6c0"></span>Completed</span></div>
+              <div class="crow2">
+                <span class="cbar"><span style="width:100%;background:#9aa6c0"></span></span>
+                <span class="reach">96 of 96 reached</span>
+                <span class="oc g">40 interested</span><span class="oc b">5 to interview</span>
+                <span class="nextbtn ghost">Duplicate</span></div>
+            </div>
+          </div>
+
+          <div class="soft-card" style="margin-top:14px;position:relative;background:#f7faff;border-color:#d5e4ff">
+            <span class="cue" style="left:-11px;top:-11px">4</span>
+            <span style="font-size:12.5px"><b>On any campaign you can</b> pause / resume, take over a conversation, duplicate it for a new role, or export the hot list into the pipeline — the engine keeps running in the background either way.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <h4>What each number means</h4>
+      <div class="item"><span class="num">1</span><p><b>Control tower.</b> Live totals across every campaign — reached, interested and interviews booked today — so a recruiter or TL sees output at a glance.</p></div>
+      <div class="item"><span class="num">2</span><p><b>One card per campaign.</b> Channel, progress, and the four outcomes on a single line, with the single most useful next action on the right.</p></div>
+      <div class="item"><span class="num">3</span><p><b>Filter by state.</b> All / Running / Scheduled / Completed. The coloured dot repeats the state on each card.</p></div>
+      <div class="item"><span class="num">4</span><p><b>Manage without micromanaging.</b> Pause, take over, duplicate or push the hot list to the pipeline — the engine does the rest.</p></div>
+      <div class="note"><b>Links to the engine:</b> each card opens the live Candidate Engagement Engine screen; the script it runs comes from the Agent &amp; prompt setup the Team Lead controls.</div>
+    </div>
+  </div>
+
+  <div class="foot"><b>Nothing to babysit:</b> campaigns keep dialling and chatting on their own; this screen is where a recruiter or Team Lead checks output, jumps on the hot ones, and launches the next role.</div>
+  <div class="brandfoot"><span>Recruitment OS · Recruiter Flow</span><span>Screen 16 — Campaign management</span></div>
+</div>
+</body></html>
