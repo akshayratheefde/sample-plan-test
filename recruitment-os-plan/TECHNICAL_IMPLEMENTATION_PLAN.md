@@ -103,7 +103,7 @@ flowchart TB
 |---|---|---|
 | Frontend | **React / Next.js** (TypeScript) + React Query | | One codebase for desktop + phone; installable; offline-tolerant|
 | Grid / spreadsheet UI | **AG Grid** (lists/pipeline) + **Univer** (true spreadsheet views) | Excel-like feel  |
-| Backend | **Modular monolith** **Python (FastAPI)** with an internal event bus | Simple to run/change; typed; strong async support |
+| Backend | **Python (FastAPI)** with an internal event bus | Simple to run/change; typed; strong async support |
 | Database | **PostgreSQL 16 + pgvector** | One store for records, timeline, events, and match vectors; JSONB for custom fields |
 | Cache / queue | **Redis** (+ BullMQ / RQ) | Timers, retries, campaign fan-out, nightly billing checks |
 | Object storage | **S3-compatible** | CVs, contracts, invoices, call recordings |
