@@ -101,17 +101,17 @@ flowchart TB
 
 | Layer | Choice | Why |
 |---|---|---|
-| Frontend | **React / Next.js PWA** (TypeScript) | One codebase for desktop + phone; installable; offline-tolerant; recruiters work on mobile |
-| Grid / spreadsheet UI | **AG Grid** (lists/pipeline) + **Univer** (true spreadsheet views) | Excel-like feel without Handsontable's commercial license (see data-format doc) |
-| Backend | **Modular monolith** in **Node (NestJS)** or **Python (FastAPI)** with an internal event bus | Simple to run/change; typed; strong async support |
+| Frontend | **React / Next.js** (TypeScript) | React Query | One codebase for desktop + phone; installable; offline-tolerant|
+| Grid / spreadsheet UI | **AG Grid** (lists/pipeline) + **Univer** (true spreadsheet views) | Excel-like feel  |
+| Backend | **Modular monolith** **Python (FastAPI)** with an internal event bus | Simple to run/change; typed; strong async support |
 | Database | **PostgreSQL 16 + pgvector** | One store for records, timeline, events, and match vectors; JSONB for custom fields |
 | Cache / queue | **Redis** (+ BullMQ / RQ) | Timers, retries, campaign fan-out, nightly billing checks |
 | Object storage | **S3-compatible** | CVs, contracts, invoices, call recordings |
 | Search/match | pgvector (start) → dedicated vector DB only if needed | Contextual matching with explainability |
 | File parsing | **SheetJS** (xlsx), **Papa Parse** (csv), native JSON | Client-side staged parsing |
-| AI/LLM | Provider-agnostic **LLM gateway**; ASR + TTS vendors behind adapters | Extraction, drafting, matching rationale, voice |
+| AI/LLM | Claude, GPT **LLM gateway**; ASR + TTS Hunar.ai | Extraction, drafting, matching rationale, voice |
 | Realtime | WebSocket / SSE | Live campaign progress, pipeline updates |
-| Auth | OIDC / JWT, RBAC | Role-scoped access |
+| Auth |  JWT, RBAC | Role-scoped access |
 | Observability | OpenTelemetry + logs/metrics/traces | SLAs, campaign health, anomaly alerts |
 
 ---
